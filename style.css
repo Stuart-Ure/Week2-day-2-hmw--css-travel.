@@ -139,18 +139,19 @@ border-radius: 5px;
 cursor: default;
 }
 
-.container {
-
+.container { 
+  
   display: grid;
   grid-template-areas:
-  'single destination''single destination' 'single destination'
-  'single destination .'single destination'' single destination' ;
-  grid-template-columns: auto
+  'single destination single destination single destination'
+  'single destination single destination single destination';
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   
-  }
+}
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
-}
+
 
 
 .row {
@@ -158,9 +159,14 @@ cursor: default;
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
   /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+  grid-template-columns: 30% 30% 30%;
 }
 
 .section-title {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* The <div> with class section-title contains an <h3> child which we want to center */
   /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
 }
@@ -170,28 +176,56 @@ cursor: default;
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
     — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
+    margin: 4em;
+    margin: 1px;
+    overflow: hidden 
 }
 
 img {
   /* Set the max-width property to 100% */
+  max-width: 100%;
 }
 
 /* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
 
 .testimonial-area {
   /* Write your code here */
+  display: grid;
+  justify-content: center;
+  background-color: rgb(95, 96, 112);
+  padding: 10px;
+  align-items: center;
 }
 
 .single-testmonial{
   /* Write your code here */
+  color: rgb(178, 161, 140);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: -1rem;
+  margin: 20px;
+  height: 90%;
+  width: 90%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: rgb(205, 223, 223)
+
+
 }
 
 .footer {
   /* Write your code here */
+  background-color: #040E27;
+  padding: 5rem;
+  color: white
+
 }
 
 .footer-widget p {
   /* Write your code here */
+  color: gray;
 }
 
 .footer-widget a:hover {
@@ -200,10 +234,12 @@ img {
 
 .footer-widget ul li {
   /* Write your code here */
+  color: white;
 }
 
 .footer-widget a {
    /* Write your code here */
+  color: gray;
 }
 
 /* Media Queries */
